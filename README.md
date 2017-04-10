@@ -3,6 +3,8 @@
 A simple script to load a markdown documentation inside a terminal.
 A couple of Linux snippet are availlable in `snippets/`
 
+![snipuw Demo](./snipux_demo.gif)
+
 ## Installation
 
 The script is based on [Terminal Markdown Viewer](https://github.com/axiros/terminal_markdown_viewer).
