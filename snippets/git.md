@@ -30,3 +30,13 @@ Checkout your master and merge
     
     git checkout master
     git merge upstream/master
+
+## Checkout PR
+
+To fetch a remote PR into your local repo,
+
+	git fetch origin pull/ID/head:BRANCHNAME
+
+where ID is the pull request id and branchname is the name of the new branch that you want to create. Once you have created the branch, then simply
+
+	git checkout BRANCHNAME

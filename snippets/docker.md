@@ -17,6 +17,15 @@ Delete all images
 
 	docker rmi $(docker images -q)
 
+Delete orphaned images 
+
+	docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")
+
 Delete all Exited containers
 
 	docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm
+
+Enter into an existing container
+
+	docker exec -it <container-id> bash
+
