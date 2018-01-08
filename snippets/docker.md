@@ -21,6 +21,10 @@ Delete orphaned images
 
 	docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")
 
+Delete dangling volumes
+
+	docker volume rm $(docker volume ls -f dangling=true -q)
+
 Delete all Exited containers
 
 	docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm
