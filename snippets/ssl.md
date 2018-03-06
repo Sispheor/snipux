@@ -2,7 +2,7 @@
 
 check a ca certificate againt URL
     
-    openssl s_client -CApath ca_cert.crt -connect https://url.example
+    openssl s_client -CApath ca_cert.crt -connect url.example
 
 Check a Certificate Signing Request (CSR)
     
