@@ -1,13 +1,6 @@
 # Openshift
 
-## Admin cluster
-
-Get last events
-
-    oc get events -w
-
-
-## CLI Developer command
+## CLI Developer commands
 
 Delete all object related to a label
 
@@ -25,7 +18,15 @@ Process a template (with parameters from a file)
 
     oc process template_name --param-file parameters.env | oc create -f -
 
+## CLI Admin
 
+Get last events
+
+    oc get events -w
+
+Create admin account
+
+    oc adm policy add-cluster-role-to-user cluster-admin <account_name>
 
 ## Config
 
