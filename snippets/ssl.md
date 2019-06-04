@@ -40,3 +40,19 @@ Generate Self Signed certificate
 Get CA certificate from server
 
     echo -n | openssl s_client -connect 37.59.53.15:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/ca.cert
+
+# With proxy
+
+Get a certificate through a proxy
+
+    proxytunnel -p proxy-lon.ad.moodys.net:80 -d www.google.com:443 -a 7000
+    openssl s_client -connect localhost:7000 -showcerts
+
+
+# Trsut a CA at system level
+
+Add the certificate in /usr/share/ca-certificate and then:
+
+    sudo dpkg-reconfigure ca-certificates
+    sudo update-ca-certificates
+
