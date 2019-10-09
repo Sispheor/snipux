@@ -11,7 +11,12 @@ Reset local repository branch to be just like remote repository HEAD
 ## Branch
 
 Delete a remote branch
+
     git push -d <remote_name> <branch_name>
+
+Change parent pointer to a different parent
+
+    git rebase --onto <new-parent> <old-parent>
 
 ## Remote
 

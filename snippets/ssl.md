@@ -49,7 +49,7 @@ Get a certificate through a proxy
     openssl s_client -connect localhost:7000 -showcerts
 
 
-# Trsut a CA at system level
+# Trust a CA at system level
 
 Add the certificate in /usr/share/ca-certificate and then:
 
