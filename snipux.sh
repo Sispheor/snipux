@@ -19,6 +19,6 @@ if [ "$arg" == "list" ]; then
 else
     # echo "run $arg" 
     # echo $DIR/$1
-    mdv $DIR/$1 |less
+    bat --plain $DIR/$1
 
 fi

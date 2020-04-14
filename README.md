@@ -7,10 +7,8 @@ A couple of Linux snippet are availlable in `snippets/`
 
 ## Installation
 
-The script is based on [Terminal Markdown Viewer](https://github.com/axiros/terminal_markdown_viewer).
-```
-pip install mdv
-```
+The script is based on [bat](https://github.com/sharkdp/bat).
+Follow instructions on the Github repository to install it.
 
 Place the folder doc_viewer somewhere, for eample in ~Document/doc_viewer
 ```
