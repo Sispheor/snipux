@@ -11,14 +11,14 @@ arg=$1
 # get the current location of this script
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
-DIR="${SCRIPTPATH}/snippets"  
+DIR="${SCRIPTPATH}/snippets"
 
 if [ "$arg" == "list" ]; then
     list=`ls ${DIR}`
     echo ${list}
 else
-    # echo "run $arg" 
+    # echo "run $arg"
     # echo $DIR/$1
-    bat --plain $DIR/$1
+    bat --plain --pager="less -r" $DIR/$1
 
 fi

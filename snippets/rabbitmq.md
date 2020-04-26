@@ -3,24 +3,24 @@
 ## Admin commands
 
 Cluster status
-```
+```bash
 rabbitmqctl cluster_status
 ```
 
 list queue
-```
+```bash
 rabbitmqadmin list queues name
 ```
 
 Clean queue
-```
+```bash
 rabbitmqadmin delete queue name='celery'
 ```
 
 ## Install
 
 Install rabbit and cli tool
-```
+```bash
 sudo apt-get install rabbitmq-server amqp-tools
 ```
 
@@ -30,7 +30,7 @@ sudo rabbitmq-plugins enable rabbitmq_management
 ```
 
 Get the cli and make it available to use
-```
+```bash
 wget http://127.0.0.1:15672/cli/rabbitmqadmin
 sudo mv rabbitmqadmin /etc/rabbitmqadmin
 sudo chmod 755 /etc/rabbitmqadmin
@@ -44,7 +44,8 @@ sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 ```
 
 Install rabbitmqadmin
-```
+
+```bash
 wget http://localhost:15672/cli/rabbitmqadmin
 cp rabbitmqadmin /usr/local/bin
 chmod 755 /usr/local/bin/rabbitmqadmin
@@ -53,7 +54,7 @@ chmod 755 /usr/local/bin/rabbitmqadmin
 ## Testing from CLI
 
 Publish a message with amqp-tools in the default rabbitmq exchange (amq.topic) with the topic key "test.light"
-```
+```bash
 amqp-publish -e "amq.topic" -r "test.light" -b "your message"
 ```
 e --> exchange name to publish (topic)
@@ -61,14 +62,14 @@ b --> message
 r --> rouring key (queue name)
 
 Test publish a json message
-```
+```bash
 amqp-publish -e "amq.topic" -r "test.light" -b '{"test" : "message"}'
 ```
 
 ## MQTT
 
 Enable mqtt plugin
-```
+```bash
 sudo rabbitmq-plugins enable rabbitmq_mqtt
 sudo systemctl restart rabbitmq-server
 ```

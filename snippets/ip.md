@@ -1,30 +1,42 @@
-# To Display Device Attributes
-ip link show
+# IP
 
-# enable interface
-ip link set eth1 up
+To Display Device Attributes
 
-# disable interface
-ip link set eth1 down
+    ip link show
 
-# show IP address
-ip addr show
+enable interface
 
-# set ip
-ip addr add 192.168.50.5 dev eth1
+    ip link set eth1 up
 
-# remove ip
-ip addr del 192.168.50.5/24 dev eth1
+disable interface
 
-# show route
-route -n
-ip route show
+    ip link set eth1 down
 
-# add static route
-ip route add 10.10.20.0/24 via 192.168.50.100 dev eth0
+show IP address
 
-# remove route
-ip route del 10.10.20.0/24
+    ip addr show
 
-# change/update default gateway
-ip route add default via 192.168.50.100
+set ip
+
+    ip addr add 192.168.50.5 dev eth1
+
+remove ip
+
+    ip addr del 192.168.50.5/24 dev eth1
+
+show route
+
+    route -n
+    ip route show
+
+add static route
+
+    ip route add 10.10.20.0/24 via 192.168.50.100 dev eth0
+
+remove route
+
+    ip route del 10.10.20.0/24
+
+change/update default gateway
+
+    ip route add default via 192.168.50.100
