@@ -52,3 +52,14 @@ To fetch a remote PR into your local repo,
 where ID is the pull request id and branchname is the name of the new branch that you want to create. Once you have created the branch, then simply
 
 	git checkout BRANCHNAME
+
+## Rebase
+
+Change parent commit
+
+	git rebase --onto <new-parent> <old-parent>
+	
+	
+	
+	
+
