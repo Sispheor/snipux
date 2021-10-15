@@ -28,8 +28,4 @@ Create admin account
 
     oc adm policy add-cluster-role-to-user cluster-admin <account_name>
 
-## Config
 
-Node config in `/etc/origin/node/node-config.yaml`
-
-Then restart service: `sudo systemctl restart atomic-openshift-node`
