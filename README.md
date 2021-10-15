@@ -10,7 +10,7 @@ A couple of Linux snippet are availlable in `snippets/`
 The script is based on [bat](https://github.com/sharkdp/bat).
 Follow instructions on the Github repository to install it.
 
-Place the folder doc_viewer somewhere, for eample in ~Document/doc_viewer
+Place the folder doc_viewer somewhere, for example in `~Document/snipux`
 ```
 tree Documents/snipux
 Documents/snipux
@@ -35,11 +35,11 @@ Also, edit the line in this file to set the right path to your installation
 _script_commands=$(/path/to/Documents/snipux/snipux.sh list)
 ```
 
-If zhh is used instead of bash, update the zshrc with follwing lines:
+If zsh is used instead of bash, update the zshrc with following lines:
 ```
 autoload bashcompinit
 bashcompinit
-source /path/to/your/bash_completion_file
+source /etc/bash_completion.d/snipux
 ```
 
 Source the bash completion file or load a new terminal
