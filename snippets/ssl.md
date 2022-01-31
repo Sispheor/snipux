@@ -56,3 +56,8 @@ Add the certificate in /usr/share/ca-certificate and then:
     sudo dpkg-reconfigure ca-certificates
     sudo update-ca-certificates
 
+# Check if the certificate matches a Private Key
+
+  openssl x509 -noout -modulus -in <file>.crt | openssl md5
+  openssl rsa -noout -modulus -in <file>.key | openssl md5
+  openssl req -noout -modulus -in <file>.csr | openssl md5
