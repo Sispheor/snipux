@@ -21,7 +21,7 @@ Check a certificate
     openssl x509 -in certificate.crt -text -noout
 
 
-# Generateate a self signed certificate
+# Generate a self signed certificate
 
 Generate private key
 
@@ -34,6 +34,36 @@ Generate CSR
 Generate Self Signed certificate
 
     openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+
+# Generate self signed cert with config
+
+Config testing.domain.local.cnf:
+```
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=FR
+ST=Isere
+L=Grenoble
+O=SharedInfra
+emailAddress=me@domain.com
+CN = testing.domain.local.cnf
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = testing.domain.local.cnf
+```
+
+Create private key and cert:
+```
+openssl req -new -x509 -newkey rsa:2048 -sha256 -nodes -keyout testing.domain.local.cnf.key -days 3560 -out testing.domain.local.cnf.crt -config testing.domain.local.cnf.cnf
+```
 
 # Others
 
