@@ -58,8 +58,7 @@ where ID is the pull request id and branchname is the name of the new branch tha
 Change parent commit
 
 	git rebase --onto <new-parent> <old-parent>
-	
-	
-	
-	
 
+## Keep your own independent version of the file or folder
+
+  git update-index --skip-worktree <file>
